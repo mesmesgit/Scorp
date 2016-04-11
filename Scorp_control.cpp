@@ -27,7 +27,7 @@ int main() {
 	// int spos;
 	// int num_line = 0;
 	// char *ch;
-	
+
 	// SerialPort serialPort;
 	// Dynamixel dynamixel;
 
@@ -75,6 +75,7 @@ int main() {
 	      printf("13. 6 legged walking - rowing\n");
 	      printf("14. 6 legged walking back - two tripods\n");
 	      printf("15. 6 legged walking forward - two tripods\n");
+	      printf("16. 6 legged walking - frequency control\n");
 	      printf("20. Pinchers open and close\n");
 	      printf("30. Tail up and threatening\n");
 	      printf("60. Set speed\n");
@@ -128,11 +129,11 @@ int main() {
 
 		    // read the initial positions from file
 		    readPos("initial_position.txt");
-		    
+
 		    break;
 
 		 case 3:  // 2 legged walking - pull 4 behind
-		    
+
 		    // debug mesg
 		    printf("In case 3\n");
 
@@ -143,12 +144,12 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
-		      lHipFwd(3);  
-		      lFootDown(5);  
-		      lHipMid(3);  
-		      lFootUp(5); 
+		      lHipFwd(3);
+		      lFootDown(5);
+		      lHipMid(3);
+		      lFootUp(5);
 
 		      rHipFwd(4);
 		      rFootDown(6);
@@ -169,12 +170,12 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
-		      lHipMid(11);  
-		      lFootDown(13);  
-		      lHipBack(11);  
-		      lFootUp(13); 
+		      lHipMid(11);
+		      lFootDown(13);
+		      lHipBack(11);
+		      lFootUp(13);
 
 		      rHipMid(12);
 		      rFootDown(14);
@@ -195,11 +196,11 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
-		      lHipFwd(3);  
+		      lHipFwd(3);
 		      rHipFwd(4);
-		      lFootDown(5);  
+		      lFootDown(5);
 		      rFootDown(6);
 		      lHipMid(3);
 		      rHipMid(4);
@@ -220,11 +221,11 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
-		      lHipMid(11);  
+		      lHipMid(11);
 		      rHipMid(12);
-		      lFootDown(13);  
+		      lFootDown(13);
 		      rFootDown(14);
 		      lHipBack(11);
 		      rHipBack(12);
@@ -245,7 +246,7 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
 		      lFootDown(9);
 		      rFootDown(10);
@@ -278,7 +279,7 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
 		      lFootDown(9);
 		      rFootDown(10);
@@ -311,13 +312,13 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
 
 		      rHipMid(12);
-		      rFootDown(14);  
-		      rHipBack(12);  
-		      rFootUp(14); 
+		      rFootDown(14);
+		      rHipBack(12);
+		      rFootUp(14);
 
 		      lHipFwd(3);
 		      lFootDown(5);
@@ -348,7 +349,7 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
 		      lFootDown(9);
 		      rFootDown(10);
@@ -391,7 +392,7 @@ int main() {
 		    // set all feet up
 		    allFeetUp();
 
-		    // start repeating motion 
+		    // start repeating motion
 		    for (i = 0; i < 5; i++) {
 		      lFootDown(9);
 		      rFootDown(10);
@@ -482,7 +483,7 @@ int main() {
 		    break;
 
 		case 13:  // 6 legged walking - rowing
-		    
+
 		    // debug mesg
 		    printf("In case 13\n");
 
@@ -547,7 +548,7 @@ int main() {
 		    // take spread stance
 		    // spreadStance();
 
-		    // set all feet down 
+		    // set all feet down
 		    // allFeetDown();
 
 		    // setup - move 2 hips into position
@@ -589,7 +590,7 @@ int main() {
 		    rFootUp(14);
 		    Utils::sleepMS(wdelay);
 
-		    // all 4 corners move CW - R up 
+		    // all 4 corners move CW - R up
 		    rHipBack(12);
 		    rHipMid(4);
 		    lHipFwd(3);
@@ -616,7 +617,7 @@ int main() {
 		    // take spread stance
 		    // spreadStance();
 
-		    // set all feet down 
+		    // set all feet down
 		    // allFeetDown();
 
 		    // setup - move 2 hips into position
@@ -642,7 +643,7 @@ int main() {
 		    rFootDown(14);
 		    Utils::sleepMS(wdelay);
 
-		    // all 4 corners move CW - R up 
+		    // all 4 corners move CW - R up
 		    rHipBack(12);
 		    rHipMid(4);
 		    lHipFwd(3);
@@ -669,6 +670,54 @@ int main() {
 		  } // end of for loop
 
 		    break;
+
+		case 16:  // 6 legged walking - 2 tripods - P0 + R*sin(wt + phi)
+
+		    // debug mesg
+		    printf("In case 16\n");
+
+		    // read the initial positions from file
+		    readPos("initial_position.txt");
+		    Utils::sleepMS(wdelay);
+
+		    // set parameters
+		    // pos = p0 + hr*sin(omeg * timevbl + phi);
+		    p0 = 462;
+		    hr = 50;
+		    omeg = ( 2 * PI ) / 5;
+		    phiHIP = 0;  // set to PI for backward movement
+		    phiFT = PI / 2;
+		    phiFT910 = 3 * PI / 2;
+
+		    for (int t=0; t < 50; t++)
+		    {
+		    	// Hips
+		    	posHIP312 = (int) (p0 + hr * sin( omeg * t + phiHIP ));
+		    	posHIP411 = 100 + posHIP312;
+		    	// Feet
+		    	posFT513 = (int) (p0 + hr * sin( omeg * t + phiFT ));
+		    	posFT9  = (int) (p0 + hr * sin( omeg * t + phiFT910 ));
+		    	posFT614 = 100 + posFT513;
+		    	posFT10  = 100 + posFT9;
+
+		    	// Feet
+		    	dynamixel.setPosition(&serialPort, 5, posFT513);
+		    	dynamixel.setPosition(&serialPort, 10, posFT10);
+		    	dynamixel.setPosition(&serialPort, 13, posFT513);
+		    	dynamixel.setPosition(&serialPort, 6, posFT614);
+		    	dynamixel.setPosition(&serialPort, 9, posFT9);
+		    	dynamixel.setPosition(&serialPort, 14, posFT614);
+
+		    	// Hips
+		    	dynamixel.setPosition(&serialPort, 12, posHIP312);
+		    	dynamixel.setPosition(&serialPort, 4, posHIP411);
+		    	dynamixel.setPosition(&serialPort, 3, posHIP312);
+		    	dynamixel.setPosition(&serialPort, 11, posHIP411);
+
+		    	Utils::sleepMS(wdelay);
+		    }
+		    //
+			break;
 
 		case 20:   //  pinchers open and close
 
@@ -705,7 +754,7 @@ int main() {
 		   for (i = 0; i < 10; i++) {
 		     tailTipOsc();
 		   }
- 
+
 		   break;
 
 		 case 60:
@@ -760,7 +809,7 @@ int main() {
 
 // function to read position(s)
 void readPos(const char * filename) {
-   
+
     ssize_t read;
     char * line = NULL;
     size_t len = 0;
@@ -797,7 +846,7 @@ void lFootDown(int AX12id) {
 	dynamixel.setPosition(&serialPort, AX12id, 512);
 	Utils::sleepMS(mdelay);
 }
-	
+
 // function to set L foot up
 void lFootUp(int AX12id) {
 	dynamixel.setPosition(&serialPort, AX12id, 462);
@@ -815,7 +864,7 @@ void rFootDown(int AX12id) {
 	dynamixel.setPosition(&serialPort, AX12id, 512);
 	Utils::sleepMS(mdelay);
 }
-	
+
 // function to set R foot up
 void rFootUp(int AX12id) {
 	dynamixel.setPosition(&serialPort, AX12id, 562);
@@ -914,7 +963,7 @@ void allFeetUp(void) {
     rFootUp(14);
 }
 
-// set all the feet down 
+// set all the feet down
 void allFeetDown(void) {
     // set all feet down
     lFootDown(5);
