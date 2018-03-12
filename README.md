@@ -1,4 +1,4 @@
-# 
+# MES rev 3/12/2018
 C++ to control Scorpion robot - Robotis Bioloid Premium
 
 To connect the Scorpion via USB cable to Ubuntu computer:
@@ -12,5 +12,6 @@ To connect the Scorpion via USB cable to Ubuntu computer:
 
  Once the Scorpion is successfully connected to the Ubuntu computer, compile the code:
   - make
+
  Then, run the program:  
   - ./scorp
